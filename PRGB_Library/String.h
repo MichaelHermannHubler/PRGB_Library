@@ -5,11 +5,14 @@ private:
 	size_t _length;
 	char* _str;
 
-// Class Methods
+// Constructors / Destructor
 public:
 	String();
 	String(const char* val);
+	~String();
 
+// Class Methods
+public:
 	char* c_str();
 	size_t getLength();
 	void Concatenate(String s2);
@@ -33,14 +36,12 @@ public:
 	String& operator= (const String& other);
 	// Move Assignment
 	String& operator= (String&& other) noexcept;
-	// Destructor
-	~String();
 
 // Static Methods
 public:
 	static String Concatenate(String s1, String s2);
 
-// Iterator Class
+// Iterator
 	class Iterator {
 	public:
 		using iterator_category = std::bidirectional_iterator_tag;
@@ -52,7 +53,7 @@ public:
 	private:
 		pointer m_Ptr;
 
-	// Class Methods
+	// Constructor
 	public:
 		Iterator(pointer ptr);
 
@@ -72,5 +73,3 @@ public:
 	Iterator begin() const;
 	Iterator end() const;
 };
-
-

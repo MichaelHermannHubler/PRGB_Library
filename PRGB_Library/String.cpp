@@ -89,7 +89,8 @@ String& String::operator=(String&& source) noexcept
 
 String::~String()
 {
-	delete[] _str;
+	if (_str != nullptr)
+		delete[] _str;
 }
 
 

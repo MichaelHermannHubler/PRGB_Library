@@ -24,6 +24,9 @@
     <ClInclude Include="String.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="UniquePointer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -33,6 +36,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="String.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="UniquePointer.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
