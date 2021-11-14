@@ -4,13 +4,13 @@
 
 
 String::String() :
-	_str(nullptr), _length(0) {
+	_length(0), _str(nullptr) {
 	_str = new char[1];
 	_str[0] = '\0';
 }
 
 String::String(const char* val) :
-	_str(nullptr), _length(0) {
+	_length(0), _str(nullptr) {
 	if (val == nullptr) {
 		_str = new char[1];
 		_str[0] = '\0';
@@ -26,7 +26,7 @@ char* String::c_str() {
 	return _str;
 }
 
-size_t String::getLength() {
+size_t String::getLength() const {
 	return _length;
 }
 
@@ -75,22 +75,22 @@ String::String(String&& other) noexcept
 	other._str = nullptr;
 }
 
-String& String::operator=(const String& other)
+String& String::operator=(const String& source)
 {
-	*this = String(other);
+	*this = String(source);
 	return *this;
 }
 
 String& String::operator=(String&& source) noexcept
 {
+	_length = source._length;
 	std::swap(_str, source._str);
 	return *this;
 }
 
 String::~String()
 {
-	if (_str != nullptr)
-		delete[] _str;
+	delete[] _str;
 }
 
 

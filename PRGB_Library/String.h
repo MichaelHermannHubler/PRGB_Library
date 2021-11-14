@@ -14,7 +14,7 @@ public:
 // Class Methods
 public:
 	char* c_str();
-	size_t getLength();
+	size_t getLength() const;
 	void Concatenate(String s2);
 
 // Operators
@@ -33,9 +33,9 @@ public:
 	// Move
 	String(String&& other) noexcept;
 	// Copy Assignment
-	String& operator= (const String& other);
+	String& operator= (const String& source);
 	// Move Assignment
-	String& operator= (String&& other) noexcept;
+	String& operator= (String&& source) noexcept;
 
 // Static Methods
 public:

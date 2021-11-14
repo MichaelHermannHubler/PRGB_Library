@@ -16,6 +16,9 @@ int main()
 	TestString();
 
 	TestUniquePointer();
+
+	std::cout << "press any key to exit...";
+	getchar();
 }
 
 void TestString()
@@ -79,7 +82,7 @@ void Str_Test3() {
 	std::cout << "for Iterator reversed: ";
 	for (String::Iterator it = test.end(); it != test.begin(); --it) {
 		String::Iterator it2 = it;
-		it2--;
+		--it2;
 		std::cout << *it2;
 	}
 	std::cout << std::endl;
