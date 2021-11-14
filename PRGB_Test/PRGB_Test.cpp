@@ -113,6 +113,7 @@ void TestUniquePointer() {
 		std::cout << "Entity is true" << std::endl;
 	else
 		std::cout << "Entity is false" << std::endl;
+	delete e; // prevent memory leak
 
 	std::cout << "String Pointer: " << stringPointer->c_str() << std::endl;
 
@@ -127,4 +128,5 @@ void TestUniquePointer() {
 	std::cout << "String Pointer After Reset: " << std::addressof(*stringPointer) << std::endl;
 
 	std::cout << std::endl << std::endl;
+	delete s; // prevent memory leak
 }
