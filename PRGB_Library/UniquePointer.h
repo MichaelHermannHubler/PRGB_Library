@@ -16,6 +16,8 @@ public:
 	operator bool() const;
 	T* operator->();
 	T& operator*();
+	UniquePointer(const UniquePointer& other) = delete;
+	UniquePointer& operator= (const UniquePointer& source) = delete;
 
 // Class Methods
 public:
