@@ -95,9 +95,9 @@ void Str_Test3() {
 
 void TestUniquePointer() {
 
-	std::cout << "----------------------" << std::endl;
-	std::cout << "Start Test for Strings" << std::endl;
-	std::cout << "----------------------" << std::endl << std::endl;
+	std::cout << "------------------------------" << std::endl;
+	std::cout << "Start Test for Unique Pointers" << std::endl;
+	std::cout << "------------------------------" << std::endl << std::endl;
 
 	UniquePointer<Entity> entityPointer(new Entity);
 	UniquePointer<String> stringPointer(new String("Hello World"));
